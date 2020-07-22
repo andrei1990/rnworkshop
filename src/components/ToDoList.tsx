@@ -8,6 +8,8 @@ type Props = {
     todos: ToDos;
 }
 
+const _keyExtractor = (item: ToDo, index: Number) => (item.name + index.toString);
+
 const ToDoList = ({
     todos
 }: Props)=> {
@@ -16,10 +18,12 @@ const ToDoList = ({
             <Text>{todos.length}</Text>
           	<FlatList<ToDo>
               data={todos}
+              keyExtractor={_keyExtractor}
               renderItem={({ item }) => (<ToDoItem todo={item}></ToDoItem>)}/>
         </View>
     );
 };
+
 
 
 export default ToDoList;

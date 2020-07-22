@@ -1,4 +1,4 @@
-import AddToDoAction from '../types/types'
+import {AddToDoAction} from '../types/types'
 
 
 

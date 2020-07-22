@@ -2,4 +2,10 @@ export type ToDo = {
     name: string;
 }
 
-export type TodoListState = ToDo[];
+export type AddToDoAction = {
+    type: string;
+    data: ToDo;
+}
+
+export type ToDoListAction = AddToDoAction
+
