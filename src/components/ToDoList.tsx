@@ -1,29 +1,44 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { FlatList, View, StyleSheet, Text} from 'react-native';
 import { connect } from 'react-redux'
 import ToDoItem from './ToDoItem';
 import ToDo, { ToDos } from '../model/ToDo';
+import ToDoItemNew from './ToDoItem';
 
-type Props = {
-    todos: ToDos;
-}
 
-const _keyExtractor = (item: ToDo, index: Number) => (item.name + index.toString);
+interface ToDoListProps {
+    todos: ToDos,
+    onItemPress: any
+  }
+  
+export default class ToDoListNew extends Component<ToDoListProps> {
+  
+    constructor(props: ToDoListProps) {
+      super(props)
+    }
+    _keyExtractor = (item: ToDo, index: Number) => (item.name + index.toString);
 
-const ToDoList = ({
-    todos
-}: Props)=> {
-    return (
-        <View style={{backgroundColor : '#ff223f', marginHorizontal: 15}}>
-            <Text>{todos.length}</Text>
-          	<FlatList<ToDo>
-              data={todos}
-              keyExtractor={_keyExtractor}
-              renderItem={({ item }) => (<ToDoItem todo={item}></ToDoItem>)}/>
+  
+    render() {
+      return (
+        <View style={styles.list}>
+          <FlatList
+            data={this.props.todos}
+            keyExtractor={this._keyExtractor}
+            renderItem={({ item }) => (
+              <ToDoItemNew todo={item} onPress={this.props.onItemPress} />
+            )}
+          />
         </View>
-    );
-};
+      )
+    }
+  }
 
 
 
-export default ToDoList;
+
+const styles = StyleSheet.create({
+    list: {
+      backgroundColor: '#eeeaaa'
+    },
+  })
