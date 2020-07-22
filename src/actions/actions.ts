@@ -1,13 +1,19 @@
-import {AddToDoAction} from '../types/types'
+import {AddToDoAction, DisplayToDoAction} from '../types/types'
 
 
 
 
-const  addTodo = (name: string): AddToDoAction => ({
+export const  addTodo = (name: string): AddToDoAction => ({
     type: 'add',
     data: {
         name
     }
 });
 
-export default addTodo;
+export const  displayToDo = (name: string): DisplayToDoAction => ({
+    type: 'display',
+    name: name
+});
+
+
+

@@ -4,26 +4,41 @@ import ToDo from '../model/ToDo'
 
 
 
-type Props = {
-    todo: ToDo;
+
+interface ToDoItemProps{
+  todo: ToDo,
+  onPress: any
 }
 
-const ToDoItem = ({
-    todo
-}: Props)=> {
-    return (
-        <TouchableOpacity style={styles.deal}>
+export default class ToDoItemNew extends Component<ToDoItemProps>{
+  
+
+    constructor(props: ToDoItemProps) {
+      super(props)
+    }
+  
+    handlePress: any = () => {
+      console.log('pressed item')
+      console.log(this.props.todo.name)
+      this.props.onPress(this.props.todo.name)
+    }
+  
+    render() {
+      const { todo } = this.props
+      return (
+        <TouchableOpacity style={styles.todo} onPress={this.handlePress}>
           <View style={styles.info}>
             <Text style={styles.title}>{todo.name}</Text>
           </View>
         </TouchableOpacity>
       )
+    }
+  
 }
 
-export default ToDoItem;
 
 const styles = StyleSheet.create({
-  deal: {
+  todo: {
     marginHorizontal: 16,
     marginTop: 16
   },
