@@ -1,6 +1,7 @@
 
 export declare type ToDos = ToDo[]
 
-export  default interface ToDo  {
-    name: string
+export  default class ToDo  {
+    name: string = ''
+    id: string = ''
 }
