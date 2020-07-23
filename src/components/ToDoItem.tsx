@@ -5,35 +5,35 @@ import ToDo from '../model/ToDo'
 
 
 
-interface ToDoItemProps{
+interface ToDoItemProps {
   todo: ToDo,
   onPress: any
 }
 
 export default class ToDoItemNew extends Component<ToDoItemProps>{
-  
 
-    constructor(props: ToDoItemProps) {
-      super(props)
-    }
-  
-    handlePress: any = () => {
-      console.log('pressed item')
-      console.log(this.props.todo.name)
-      this.props.onPress(this.props.todo.name)
-    }
-  
-    render() {
-      const { todo } = this.props
-      return (
-        <TouchableOpacity style={styles.todo} onPress={this.handlePress}>
-          <View style={styles.info}>
-            <Text style={styles.title}>{todo.name}</Text>
-          </View>
-        </TouchableOpacity>
-      )
-    }
-  
+
+  constructor(props: ToDoItemProps) {
+    super(props)
+  }
+
+  handlePress: any = () => {
+    console.log('pressed item')
+    console.log(this.props.todo.name)
+    this.props.onPress(this.props.todo.name)
+  }
+
+  render() {
+    const { todo } = this.props
+    return (
+      <TouchableOpacity style={styles.todo} onPress={this.handlePress}>
+        <View style={styles.info}>
+          <Text style={styles.title}>{todo.name}</Text>
+        </View>
+      </TouchableOpacity>
+    )
+  }
+
 }
 
 

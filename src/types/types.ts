@@ -11,5 +11,9 @@ export type DisplayToDoAction = {
     payload: string;
 }
 
-export type ToDoListAction = AddToDoAction | DisplayToDoAction
+export type BackToDoAction = {
+    type: string;
+}
+
+export type ToDoListAction = AddToDoAction | DisplayToDoAction | BackToDoAction
 
