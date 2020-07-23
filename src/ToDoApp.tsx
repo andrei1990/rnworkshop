@@ -3,24 +3,43 @@ import { View, Button, Text, StyleSheet } from 'react-native';
 import AdToDo from './containers/AdToDo';
 import ToDoList from './components/ToDoList';
 import { connect } from 'react-redux';
-import { ToDos } from './model/ToDo';
+import ToDo, { ToDos } from './model/ToDo';
 import TODOList from './components/ToDoListNew';
 import AppState from './state/AppState';
 import ToDoListState from './state/ToDoListState';
 import ToDoListNew from './components/ToDoList';
-import {displayToDo} from './actions/actions'
+import ToDoDetails from './components/ToDoDetails';
+import AppAction from './actions/AppAction';
 
 
 
 interface AppProps {
   appData: ToDoListState
   displayToDo: (name: string) => any
+  navigateBack: () => any
 }
 
 
 class ToDoAppNew extends Component<AppProps>{
 
+  currentToDo = (): ToDo => {
+    return {name :this.props.appData.currentToDoName }
+  }
+
   render(){
+    if (this.props.appData.currentToDoName) {
+      console.log('displaying details')
+      return (
+        <View>
+         {this.currentToDo() && (
+          <ToDoDetails
+            initialToDoData={this.currentToDo()}
+            onBack={this.props.navigateBack}
+          />
+         )}
+        </View>
+      )
+    }
     return (
       <View style={styles.container}>
         <AdToDo/>
@@ -40,7 +59,8 @@ const mapStateToProps = (state: any) => ({
 
 function mapDispatchToProps(dispatch: any) {
   return {
-    displayToDo: (name: string) => dispatch(displayToDo(name)),
+    displayToDo: (name: string) => dispatch(AppAction.displayToDo(name)),
+    navigateBack: () => dispatch(AppAction.navigateBack())
   }
 }
 

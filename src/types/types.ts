@@ -1,11 +1,15 @@
-export type ToDo = {
-    name: string;
-}
+import ToDo from "../model/ToDo"
+
 
 export type AddToDoAction = {
     type: string;
     data: ToDo;
 }
 
-export type ToDoListAction = AddToDoAction
+export type DisplayToDoAction = {
+    type: string;
+    payload: string;
+}
+
+export type ToDoListAction = AddToDoAction | DisplayToDoAction
 

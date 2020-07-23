@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { TextInput, View, Button, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-ionicons'
 import { connect } from 'react-redux'
-import {addTodo} from '../actions/actions'
 import { Dispatch } from 'redux';
+import AppAction from '../actions/AppAction';
 
 
 interface AdToDoProps{
@@ -46,7 +46,7 @@ class AdToDoNew extends Component<AdToDoProps>{
 
 const mapDipatchToProps = (dispatch: Dispatch) => ({
     onAddToDo: (name: string) => {
-        dispatch(addTodo({name}));
+        dispatch(AppAction.addToDo(name));
     }
 });
 
