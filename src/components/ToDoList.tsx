@@ -4,11 +4,13 @@ import { connect } from 'react-redux'
 import ToDoItem from './ToDoItem';
 import ToDo, { ToDos } from '../model/ToDo';
 import ToDoItemNew from './ToDoItem';
+import { HomeScreenNavigationProp } from '../ToDoApp';
 
 
 interface ToDoListProps {
     todos: ToDos,
-    onItemPress: any
+    onItemPress: any,
+    navigation: HomeScreenNavigationProp
   }
   
 export default class ToDoListNew extends Component<ToDoListProps> {
@@ -16,7 +18,7 @@ export default class ToDoListNew extends Component<ToDoListProps> {
     constructor(props: ToDoListProps) {
       super(props)
     }
-    _keyExtractor = (item: ToDo, index: Number) => (item.name + index.toString);
+    _keyExtractor = (item: ToDo, index: Number) => (item.id);
 
   
     render() {
@@ -26,7 +28,7 @@ export default class ToDoListNew extends Component<ToDoListProps> {
             data={this.props.todos}
             keyExtractor={this._keyExtractor}
             renderItem={({ item }) => (
-              <ToDoItemNew todo={item} onPress={this.props.onItemPress} />
+              <ToDoItemNew todo={item} onPress={this.props.onItemPress} navigation={this.props.navigation}/>
             )}
           />
         </View>
