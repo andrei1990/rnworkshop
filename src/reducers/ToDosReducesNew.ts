@@ -2,12 +2,13 @@ import ToDoListState from "../state/ToDoListState"
 import IAction from "../actions/IAction"
 import ToDo from "../model/ToDo"
 import AppAction from "../actions/AppAction"
+import generateId from "../utils/Utils"
 
 
 
 export default class ToDosReducerNew {
     private static readonly _initialState: ToDoListState = {
-        todos: [{ name: 'now' }, { name: 'then' }],
+        todos: [{ name: 'now', id: "3" }, { name: 'then', id: "4" }],
         currentToDoName: null
     }
 
@@ -17,7 +18,7 @@ export default class ToDosReducerNew {
                 let todoName = action.payload;
                 console.log({ state });
                 return {
-                    todos: [...state.todos, { name :todoName }],
+                    todos: [...state.todos, { name :todoName, id: generateId()}],
                     currentToDoName: null
                 };
 

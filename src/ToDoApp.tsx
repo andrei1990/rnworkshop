@@ -10,41 +10,45 @@ import ToDoListNew from './components/ToDoList';
 import ToDoDetails from './components/ToDoDetails';
 import AppAction from './actions/AppAction';
 import ToDoDetailAction from './actions/tododetail/ToDoDetailAction';
+import { StackNavigationProp } from '@react-navigation/stack';
+import { RootStackParamList } from '../App';
+import { RouteProp } from '@react-navigation/native';
 
 
+
+export type DetailsScreenNavigationProp = StackNavigationProp<
+  RootStackParamList,
+  'Details'
+>;
+
+export type HomeScreenNavigationProp = StackNavigationProp<
+  RootStackParamList,
+  'Home'
+>;
+
+export type DetailsScreenRouteProp = RouteProp<RootStackParamList, 'Details'>;
 
 interface AppProps {
   appData: ToDoListState
   displayToDo: (name: string) => any
-  navigateBack: () => any
+  navigateBack: () => any,
+  navigation: HomeScreenNavigationProp
 }
 
 
 class ToDoAppNew extends Component<AppProps>{
 
+  
   currentToDo = (): ToDo => {
     return {name :this.props.appData.currentToDoName }
   }
 
   render(){
-    if (this.props.appData.currentToDoName) {
-      console.log('displaying details')
-      return (
-        <View>
-         {this.currentToDo() && (
-          <ToDoDetails
-            initialToDoData={this.currentToDo()}
-            onBack={this.props.navigateBack}
-          />
-         )}
-        </View>
-      )
-    }
     return (
       <View style={styles.container}>
         <AdToDo/>
         <View style={{backgroundColor : '#00f0fe'}}>
-          <ToDoListNew todos={this.props.appData.todos} onItemPress={this.props.displayToDo}/>
+          <ToDoListNew todos={this.props.appData.todos} onItemPress={this.props.displayToDo} navigation={this.props.navigation}/>
         </View>
       </View>
   );
@@ -59,7 +63,7 @@ const mapStateToProps = (state: any) => ({
 
 function mapDispatchToProps(dispatch: any) {
   return {
-    displayToDo: (name: string) => dispatch(AppAction.displayToDo(name)),
+    displayToDo: (name: string) => {},
     navigateBack: () => {
       dispatch(AppAction.navigateBack())
       dispatch(ToDoDetailAction.resetState())

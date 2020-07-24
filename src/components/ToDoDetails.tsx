@@ -14,33 +14,42 @@ import ToDo from '../model/ToDo'
 import ToDoDetailState from '../state/todo/ToDoDetailsState'
 import ToDoDetailAction from '../actions/tododetail/ToDoDetailAction'
 import { iDataState } from '../state/IState'
+import { DetailsScreenNavigationProp, DetailsScreenRouteProp } from '../ToDoApp'
+
+
+
 
 
 interface ToDoDetailProps {
   initialToDoData: ToDo,
-  onBack: () => any,
+  resetState: () => any,
   fetchDetail: ((deal: ToDo) => any)
   todoDetailData: ToDoDetailState,
+  navigation: DetailsScreenNavigationProp;
+  route: DetailsScreenRouteProp;
 }
 
 class ToDoDetail extends Component<ToDoDetailProps> {
 
+
   constructor(props: ToDoDetailProps) {
     super(props)
   }
-
+  
   componentDidMount() {
-    this.props.fetchDetail(this.props.initialToDoData)
+    const { itemName } = this.props.route.params
+    this.props.fetchDetail({name: itemName})
   }
 
   componentWillUnmount(){
-    console.log('component unmount')
-    this.props.resetState
+    this.props.resetState()
   }
+
+
 
   handlePress: any = () => {
     console.log('pressed item')
-    this.props.onBack
+    this.props.navigation.popToTop()
   }
 
   render() {
@@ -50,7 +59,7 @@ class ToDoDetail extends Component<ToDoDetailProps> {
     console.log(loading)
     return (
         <View >
-            <TouchableOpacity onPress={this.props.onBack}>
+            <TouchableOpacity onPress={this.handlePress}>
                 <Text style={styles.backLink}>Back</Text>
             </TouchableOpacity>
             <TouchableOpacity style={[styles.container, styles.horizontal]} >
@@ -82,6 +91,9 @@ function mapDispatchToProps(dispatch: any) {
     fetchDetail: (todo: ToDo) => {
       console.log('fetching details')
       dispatch(ToDoDetailAction.fetchDetail(todo))
+    },
+    resetState: () => {
+      dispatch(ToDoDetailAction.resetState())
     }
   }
 }

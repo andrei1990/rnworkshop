@@ -1,13 +1,17 @@
 import React, { Component } from 'react'
 import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native'
 import ToDo from '../model/ToDo'
+import { StackNavigationProp } from '@react-navigation/stack'
+import { useNavigation } from '@react-navigation/native'
+import { HomeScreenNavigationProp } from '../ToDoApp'
 
 
 
 
-interface ToDoItemProps {
+interface ToDoItemProps  {
   todo: ToDo,
-  onPress: any
+  onPress: any,
+  navigation: HomeScreenNavigationProp
 }
 
 export default class ToDoItemNew extends Component<ToDoItemProps>{
@@ -20,7 +24,9 @@ export default class ToDoItemNew extends Component<ToDoItemProps>{
   handlePress: any = () => {
     console.log('pressed item')
     console.log(this.props.todo.name)
-    this.props.onPress(this.props.todo.name)
+    this.props.navigation.navigate('Details', {
+      itemName: this.props.todo.name
+    });
   }
 
   render() {
