@@ -4,12 +4,12 @@ import AdToDo from './containers/AdToDo';
 import ToDoList from './components/ToDoList';
 import { connect } from 'react-redux';
 import ToDo, { ToDos } from './model/ToDo';
-import TODOList from './components/ToDoListNew';
 import AppState from './state/AppState';
 import ToDoListState from './state/ToDoListState';
 import ToDoListNew from './components/ToDoList';
 import ToDoDetails from './components/ToDoDetails';
 import AppAction from './actions/AppAction';
+import ToDoDetailAction from './actions/tododetail/ToDoDetailAction';
 
 
 
@@ -60,7 +60,10 @@ const mapStateToProps = (state: any) => ({
 function mapDispatchToProps(dispatch: any) {
   return {
     displayToDo: (name: string) => dispatch(AppAction.displayToDo(name)),
-    navigateBack: () => dispatch(AppAction.navigateBack())
+    navigateBack: () => {
+      dispatch(AppAction.navigateBack())
+      dispatch(ToDoDetailAction.resetState())
+    }
   }
 }
 
