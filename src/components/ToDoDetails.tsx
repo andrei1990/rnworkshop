@@ -7,11 +7,13 @@ import {
   TouchableOpacity,
   StyleSheet,
   Linking,
+  ActivityIndicator,
 } from 'react-native'
 import { connect } from 'react-redux'
 import ToDo from '../model/ToDo'
 import ToDoDetailState from '../state/todo/ToDoDetailsState'
 import ToDoDetailAction from '../actions/tododetail/ToDoDetailAction'
+import { iDataState } from '../state/IState'
 
 
 interface ToDoDetailProps {
@@ -28,8 +30,12 @@ class ToDoDetail extends Component<ToDoDetailProps> {
   }
 
   componentDidMount() {
-    console.log('fetching details')
     this.props.fetchDetail(this.props.initialToDoData)
+  }
+
+  componentWillUnmount(){
+    console.log('component unmount')
+    this.props.resetState
   }
 
   handlePress: any = () => {
@@ -38,17 +44,23 @@ class ToDoDetail extends Component<ToDoDetailProps> {
   }
 
   render() {
-    let todo = this.props.initialToDoData
+    let todo = this.props.todoDetailData.todo
+    console.log(todo)
+    let loading = this.props.todoDetailData.state == iDataState.loading
+    console.log(loading)
     return (
-        <View>
+        <View >
             <TouchableOpacity onPress={this.props.onBack}>
                 <Text style={styles.backLink}>Back</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.title} >
-                <View style={styles.info}>
-                <Text style={styles.title}>{todo.name}</Text>
+            <TouchableOpacity style={[styles.container, styles.horizontal]} >
+                <View>
+                {todo && (
+                   <Text style={styles.title}>{todo.name}</Text>
+                )}
                 </View>
             </TouchableOpacity>
+            <ActivityIndicator size="large"  color={'#999999'} animating={loading}/>
       </View>
     )
   }
@@ -75,15 +87,19 @@ function mapDispatchToProps(dispatch: any) {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center"
+  },
+  horizontal: {
+    flexDirection: "row",
+    justifyContent: "space-around",
+    padding: 10
+  },
   backLink: {
     marginBottom: 5,
     color: '#22f',
     marginLeft: 10
-  },
-  image: {
-    width: '100%',
-    height: 150,
-    backgroundColor: '#ccc',
   },
   title: {
     fontSize: 16,
@@ -91,34 +107,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     backgroundColor: 'rgba(237, 149, 45, 0.4)',
   },
-  footer: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    alignItems: 'center',
-    marginTop: 15,
-  },
   info: {
     alignItems: 'center',
-  },
-  user: {
-    alignItems: 'center',
-  },
-  cause: {
-    marginVertical: 10,
-  },
-  price: {
-    fontWeight: 'bold',
-  },
-  avatar: {
-    width: 60,
-    height: 60,
-    borderRadius: 30,
-  },
-  description: {
-    borderColor: '#ddd',
-    borderWidth: 1,
-    borderStyle: 'dotted',
-    margin: 10,
-    padding: 10,
-  },
+  }
 })

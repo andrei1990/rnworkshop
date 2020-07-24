@@ -4,6 +4,7 @@ import ToDo from "../model/ToDo"
 import ToDoDetailAction from "../actions/tododetail/ToDoDetailAction"
 import UtilAction from "../actions/UtilAction"
 import IAction from "../actions/IAction"
+import AppAction from "../actions/AppAction"
 
 
 export default class ToDoDetailReducer {
@@ -35,6 +36,13 @@ export default class ToDoDetailReducer {
                 ...state,
                 state: iDataState.error,
                 errorMessage: action.error
+            }
+          case ToDoDetailAction.RESET_STATE:
+            return {
+                ...state,
+                todo: null,
+                state: iDataState.loaded,
+                errorMessage: ""
             }
             default:
                 return state
