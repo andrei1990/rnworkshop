@@ -20,6 +20,7 @@ import { DetailsScreenNavigationProp, DetailsScreenRouteProp } from '../ToDoApp'
 
 
 
+
 interface ToDoDetailProps {
   initialToDoData: ToDo,
   resetState: () => any,
