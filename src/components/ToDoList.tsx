@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { FlatList, View, StyleSheet, Text} from 'react-native';
 import { connect } from 'react-redux'
-import ToDoItem from './ToDoItem';
+import {ToDoItem} from './ToDoItem';
 import ToDo, { ToDos } from '../model/ToDo';
-import ToDoItemNew from './ToDoItem';
 import { HomeScreenNavigationProp } from '../ToDoApp';
 
 
@@ -28,7 +27,7 @@ export default class ToDoListNew extends Component<ToDoListProps> {
             data={this.props.todos}
             keyExtractor={this._keyExtractor}
             renderItem={({ item }) => (
-              <ToDoItemNew todo={item} onPress={this.props.onItemPress} navigation={this.props.navigation}/>
+              <ToDoItem todo={item}  navigation={this.props.navigation}/>
             )}
           />
         </View>

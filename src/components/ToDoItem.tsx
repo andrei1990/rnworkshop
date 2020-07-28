@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, FunctionComponent } from 'react'
 import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native'
 import ToDo from '../model/ToDo'
 import { StackNavigationProp } from '@react-navigation/stack'
@@ -8,39 +8,29 @@ import { HomeScreenNavigationProp } from '../ToDoApp'
 
 
 
-interface ToDoItemProps  {
-  todo: ToDo,
-  onPress: any,
-  navigation: HomeScreenNavigationProp
+type ToDoItemProps = {
+  todo: ToDo
 }
 
-export default class ToDoItemNew extends Component<ToDoItemProps>{
+export const  ToDoItem: FunctionComponent<ToDoItemProps> = ({todo}) => {
 
+  const navigation = useNavigation<HomeScreenNavigationProp>();
 
-  constructor(props: ToDoItemProps) {
-    super(props)
+  const handlePress = () => {
+    navigation.navigate('Details', {
+      itemName: todo.name
+    })
   }
 
-  handlePress: any = () => {
-    console.log('pressed item')
-    console.log(this.props.todo.name)
-    this.props.navigation.navigate('Details', {
-      itemName: this.props.todo.name
-    });
-  }
-
-  render() {
-    const { todo } = this.props
-    return (
-      <TouchableOpacity style={styles.todo} onPress={this.handlePress}>
-        <View style={styles.info}>
-          <Text style={styles.title}>{todo.name}</Text>
-        </View>
-      </TouchableOpacity>
-    )
-  }
-
+  return (
+    <TouchableOpacity style={styles.todo} onPress={handlePress}>
+      <View style={styles.info}>
+        <Text style={styles.title}>{todo.name}</Text>
+      </View>
+    </TouchableOpacity>
+  )
 }
+
 
 
 const styles = StyleSheet.create({
