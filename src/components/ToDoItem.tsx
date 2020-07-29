@@ -14,7 +14,7 @@ type ToDoItemProps = {
   completeToDo: (todo: ToDo) => any
 }
 
-const  ToDoItem: FunctionComponent<ToDoItemProps> = ({todo, completeToDo}) => {
+const ToDoItem: FunctionComponent<ToDoItemProps> = ({ todo, completeToDo }) => {
 
   const navigation = useNavigation<HomeScreenNavigationProp>();
 
@@ -27,34 +27,49 @@ const  ToDoItem: FunctionComponent<ToDoItemProps> = ({todo, completeToDo}) => {
   const _completeToDo = () => {
     console.log('complete to do')
     completeToDo(todo)
-  } 
+  }
 
   const _handlerLongClick = () => {
     //handler for Long Click
     Alert.alert(
       '',
-      'Complete ToDo',
+      alertMessage(),
       [
         {
           text: 'Cancel',
           onPress: () => console.log('Cancel Pressed'),
           style: 'cancel'
         },
-        { text: 'OK', onPress: () => {
-          console.log('complete to do')
-          _completeToDo()
-        } }
+        {
+          text: 'OK', onPress: () => {
+            console.log('complete to do')
+            _completeToDo()
+          }
+        }
       ],
       { cancelable: false }
     );
   };
 
-  
+  const completedStatusColor = (): string => {
+    console.log('is todo completed')
+    console.log(todo.completed)
+    let color = todo.completed ? "#bbbfff" : "#b88e1f"
+    return color
+  }
+
+  const alertMessage = (): string => {
+    let color = todo.completed ? "Undo ToDo" : "Complete To Do"
+    return color
+  }
+
+
 
   return (
     <TouchableOpacity style={styles.todo} onPress={handlePress} onLongPress={_handlerLongClick}>
       <View style={styles.info}>
         <Text style={styles.title}>{todo.name}</Text>
+        <View style={{ backgroundColor: completedStatusColor(), width: '100%', height: 15 }}></View>
       </View>
     </TouchableOpacity>
   )
@@ -63,7 +78,6 @@ const  ToDoItem: FunctionComponent<ToDoItemProps> = ({todo, completeToDo}) => {
 function mapDispatchToProps(dispatch: any) {
   return {
     completeToDo: (todo: ToDo) => {
-      console.log('completing todo')
       dispatch(AppAction.completeToDo(todo))
     }
   }
@@ -107,5 +121,5 @@ const styles = StyleSheet.create({
   price: {
     flex: 1,
     textAlign: 'right'
-  },
+  }
 })

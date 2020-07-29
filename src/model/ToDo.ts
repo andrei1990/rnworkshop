@@ -3,5 +3,6 @@ export declare type ToDos = ToDo[]
 
 export  default interface ToDo  {
     name: string | null,
-    id: string
+    id: string,
+    completed: boolean
 }

@@ -1,6 +1,6 @@
 import ToDoListState from "../state/ToDoListState"
 import IAction from "../actions/IAction"
-import ToDo from "../model/ToDo"
+import ToDo, { ToDos } from "../model/ToDo"
 import AppAction from "../actions/AppAction"
 import generateId from "../utils/Utils"
 
@@ -17,7 +17,7 @@ export default class ToDosReducerNew {
                 let todoName = action.payload;
                 console.log({ state });
                 return {
-                    todos: [...state.todos, { name :todoName, id: generateId()}]
+                    todos: [...state.todos, { name: todoName, id: generateId(), completed: false }]
                 };
 
             case AppAction.DISPLAY_TODO:
@@ -27,7 +27,7 @@ export default class ToDosReducerNew {
 
                 return {
                     ...state
-                                }
+                }
 
             case AppAction.NAVIGATE_BACK:
                 console.log('navigate back')
@@ -35,13 +35,16 @@ export default class ToDosReducerNew {
                     ...state
                 }
             case AppAction.COMPLETE_TODO:
-                console.log('completing todo')
-                let todo = action.data
-                var dataList = state.todos.filter((item) => item.name != todo?.name);
+                console.log('marking as completed')
+                let todoAction = action.data
+                let newToDos = state.todos.map(todo => 
+                    todo.id === todoAction!.id ? {...todo, completed: !todo.completed} : todo
+                    )
                 return {
-                    todos: dataList
+                    todos: newToDos
                 }
-                default:
+
+            default:
                 return state
         }
     }
