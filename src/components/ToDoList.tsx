@@ -1,18 +1,15 @@
 import React, { Component } from 'react';
-import { FlatList, View, StyleSheet, Text} from 'react-native';
-import { connect } from 'react-redux'
-import {ToDoItem} from './ToDoItem';
+import { FlatList, StyleSheet, View } from 'react-native';
+import { connect } from 'react-redux';
 import ToDo, { ToDos } from '../model/ToDo';
-import { HomeScreenNavigationProp } from '../ToDoApp';
+import  ToDoItem  from './ToDoItem';
 
 
 interface ToDoListProps {
-    todos: ToDos,
-    onItemPress: any,
-    navigation: HomeScreenNavigationProp
+    todos: ToDos
   }
   
-export default class ToDoListNew extends Component<ToDoListProps> {
+class ToDoListNew extends Component<ToDoListProps> {
   
     constructor(props: ToDoListProps) {
       super(props)
@@ -27,7 +24,7 @@ export default class ToDoListNew extends Component<ToDoListProps> {
             data={this.props.todos}
             keyExtractor={this._keyExtractor}
             renderItem={({ item }) => (
-              <ToDoItem todo={item}  navigation={this.props.navigation}/>
+              <ToDoItem todo={item}/>
             )}
           />
         </View>
@@ -35,6 +32,15 @@ export default class ToDoListNew extends Component<ToDoListProps> {
     }
   }
 
+  const mapStateToProps = (state: any) => ({
+    todos: state.appData.todos
+  });
+
+
+  export default connect(
+    mapStateToProps,
+    null
+  )(ToDoListNew)
 
 
 

@@ -8,8 +8,7 @@ import generateId from "../utils/Utils"
 
 export default class ToDosReducerNew {
     private static readonly _initialState: ToDoListState = {
-        todos: [{ name: 'now', id: "3" }, { name: 'then', id: "4" }],
-        currentToDoName: null
+        todos: [{ name: 'now', id: "3" }, { name: 'then', id: "4" }]
     }
 
     public static reducer(state: ToDoListState = ToDosReducerNew._initialState, action: IAction<any, ToDo>): ToDoListState {
@@ -18,8 +17,7 @@ export default class ToDosReducerNew {
                 let todoName = action.payload;
                 console.log({ state });
                 return {
-                    todos: [...state.todos, { name :todoName, id: generateId()}],
-                    currentToDoName: null
+                    todos: [...state.todos, { name :todoName, id: generateId()}]
                 };
 
             case AppAction.DISPLAY_TODO:
@@ -28,17 +26,22 @@ export default class ToDosReducerNew {
                 console.log(nameValue)
 
                 return {
-                    ...state,
-                    currentToDoName: nameValue
-                }
+                    ...state
+                                }
 
             case AppAction.NAVIGATE_BACK:
                 console.log('navigate back')
                 return {
-                    ...state,
-                    currentToDoName: null
+                    ...state
                 }
-            default:
+            case AppAction.COMPLETE_TODO:
+                console.log('completing todo')
+                let todo = action.data
+                var dataList = state.todos.filter((item) => item.name != todo?.name);
+                return {
+                    todos: dataList
+                }
+                default:
                 return state
         }
     }

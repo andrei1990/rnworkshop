@@ -1,18 +1,20 @@
-import React, { Component, FunctionComponent } from 'react'
-import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native'
-import ToDo from '../model/ToDo'
-import { StackNavigationProp } from '@react-navigation/stack'
 import { useNavigation } from '@react-navigation/native'
+import React, { FunctionComponent } from 'react'
+import { StyleSheet, Text, TouchableOpacity, View, Alert } from 'react-native'
+import ToDo from '../model/ToDo'
 import { HomeScreenNavigationProp } from '../ToDoApp'
+import AppAction from '../actions/AppAction'
+import { connect } from 'react-redux'
 
 
 
 
 type ToDoItemProps = {
-  todo: ToDo
+  todo: ToDo,
+  completeToDo: (todo: ToDo) => any
 }
 
-export const  ToDoItem: FunctionComponent<ToDoItemProps> = ({todo}) => {
+const  ToDoItem: FunctionComponent<ToDoItemProps> = ({todo, completeToDo}) => {
 
   const navigation = useNavigation<HomeScreenNavigationProp>();
 
@@ -22,14 +24,55 @@ export const  ToDoItem: FunctionComponent<ToDoItemProps> = ({todo}) => {
     })
   }
 
+  const _completeToDo = () => {
+    console.log('complete to do')
+    completeToDo(todo)
+  } 
+
+  const _handlerLongClick = () => {
+    //handler for Long Click
+    Alert.alert(
+      '',
+      'Complete ToDo',
+      [
+        {
+          text: 'Cancel',
+          onPress: () => console.log('Cancel Pressed'),
+          style: 'cancel'
+        },
+        { text: 'OK', onPress: () => {
+          console.log('complete to do')
+          _completeToDo()
+        } }
+      ],
+      { cancelable: false }
+    );
+  };
+
+  
+
   return (
-    <TouchableOpacity style={styles.todo} onPress={handlePress}>
+    <TouchableOpacity style={styles.todo} onPress={handlePress} onLongPress={_handlerLongClick}>
       <View style={styles.info}>
         <Text style={styles.title}>{todo.name}</Text>
       </View>
     </TouchableOpacity>
   )
 }
+
+function mapDispatchToProps(dispatch: any) {
+  return {
+    completeToDo: (todo: ToDo) => {
+      console.log('completing todo')
+      dispatch(AppAction.completeToDo(todo))
+    }
+  }
+}
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(ToDoItem)
 
 
 

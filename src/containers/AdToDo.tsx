@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, RefObject } from 'react';
 import { TextInput, View, Button, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-ionicons'
 import { connect } from 'react-redux'
@@ -11,25 +11,38 @@ interface AdToDoProps{
 }
 
 class AdToDoNew extends Component<AdToDoProps>{
+    textInput: RefObject<TextInput>
 
     constructor(props: AdToDoProps) {
         super(props)
+        this.state = {
+            name: ''
+        }
+        this.textInput = React.createRef();
       }
 
-    state = {
-        name: ''
-    }
 
     _onAdToDo = () => {
+        console.log('todo is')
+        console.log(this.state.name)
         this.props.onAddToDo(this.state.name)
+        this.setState({name: ''})
+        this.textInput.current!.clear();
+    }
+
+    _handleTextChange = (text: string) => {
+        console.log('text changed')
+        console.log(text)
+        this.setState({name: text})
     }
     
     render() {
         return (
             <View style={{flexDirection : 'row', marginHorizontal: 15}}>
                   <TextInput
+                      ref={this.textInput}
                       placeholder = 'Create new to do'
-                      onChangeText={(name) => this.setState({name})}
+                      onChangeText={(value) => this._handleTextChange(value)}
                       style={{borderWidth: 1, borderColor : '#f2f2e1', backgroundColor: '#eaeaea', height: 50, flex: 1, padding: 5}}
                   />
                   <TouchableOpacity onPress={() => this._onAdToDo()}>
