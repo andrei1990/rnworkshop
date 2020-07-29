@@ -1,19 +1,13 @@
-import 'react-native-gesture-handler';
-import React from 'react';
-import { View, Button, Text, StyleSheet } from 'react-native';
-import { connect } from 'react-redux';
-import { Provider } from 'react-redux';
-import ToDoAppNew from './src/ToDoApp';
-import ToDoDetails from './src/components/ToDoDetails';
-import { createStore, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
-import ReducerFactory from './src/reducers/ReducerFactory';
-import {store, persistor} from './src/store';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { Header } from 'react-native/Libraries/NewAppScreen';
+import React from 'react';
+import 'react-native-gesture-handler';
+import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import { LoadingView } from './src/components/LoadingView';
+import ToDoDetails from './src/components/ToDoDetails';
+import { persistor, store } from './src/store';
+import ToDoAppNew from './src/ToDoApp';
 
 export type RootStackParamList = {
   Home: undefined;

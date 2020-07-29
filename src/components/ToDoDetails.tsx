@@ -1,19 +1,13 @@
 import React, { Component } from 'react'
 import {
-  View,
-  Text,
-  Image,
-  Button,
-  TouchableOpacity,
-  StyleSheet,
-  Linking,
-  ActivityIndicator,
+  ActivityIndicator, StyleSheet, Text,
+  TouchableOpacity, View
 } from 'react-native'
 import { connect } from 'react-redux'
-import ToDo from '../model/ToDo'
-import ToDoDetailState from '../state/todo/ToDoDetailsState'
 import ToDoDetailAction from '../actions/tododetail/ToDoDetailAction'
+import ToDo from '../model/ToDo'
 import { iDataState } from '../state/IState'
+import ToDoDetailState from '../state/todo/ToDoDetailsState'
 import { DetailsScreenNavigationProp, DetailsScreenRouteProp } from '../ToDoApp'
 
 
