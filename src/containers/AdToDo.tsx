@@ -3,7 +3,9 @@ import { TextInput, View, Button, Text, StyleSheet, TouchableOpacity} from 'reac
 import Icon from 'react-native-ionicons'
 import { connect } from 'react-redux'
 import { Dispatch } from 'redux';
-import AppAction from '../actions/AppAction';
+import AppActions from '../redux/todolist/ToDoListActions';
+import { Keyboard } from 'react-native'
+
 
 
 interface AdToDoProps{
@@ -24,10 +26,12 @@ class AdToDoNew extends Component<AdToDoProps>{
 
     _onAdToDo = () => {
         console.log('todo is')
+        console.log('adding to do')
         console.log(this.state.name)
         this.props.onAddToDo(this.state.name)
         this.setState({name: ''})
         this.textInput.current!.clear();
+        Keyboard.dismiss()
     }
 
     _handleTextChange = (text: string) => {
@@ -59,7 +63,7 @@ class AdToDoNew extends Component<AdToDoProps>{
 
 const mapDipatchToProps = (dispatch: Dispatch) => ({
     onAddToDo: (name: string) => {
-        dispatch(AppAction.addToDo(name));
+        dispatch(AppActions.addToDo(name));
     }
 });
 

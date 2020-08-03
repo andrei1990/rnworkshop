@@ -2,8 +2,8 @@ import { useNavigation } from '@react-navigation/native'
 import React, { FunctionComponent } from 'react'
 import { StyleSheet, Text, TouchableOpacity, View, Alert } from 'react-native'
 import ToDo from '../model/ToDo'
-import { HomeScreenNavigationProp } from '../ToDoApp'
-import AppAction from '../actions/AppAction'
+import { HomeScreenNavigationProp } from '../screens/MainScreen'
+import AppActions from '../redux/todolist/ToDoListActions'
 import { connect } from 'react-redux'
 
 
@@ -78,7 +78,7 @@ const ToDoItem: FunctionComponent<ToDoItemProps> = ({ todo, completeToDo }) => {
 function mapDispatchToProps(dispatch: any) {
   return {
     completeToDo: (todo: ToDo) => {
-      dispatch(AppAction.completeToDo(todo))
+      dispatch(AppActions.completeToDo(todo))
     }
   }
 }

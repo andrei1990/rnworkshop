@@ -33,7 +33,7 @@ class ToDoListNew extends Component<ToDoListProps> {
   }
 
   const mapStateToProps = (state: any) => ({
-    todos: state.appData.todos
+    todos: state.todoList.todos
   });
 
 

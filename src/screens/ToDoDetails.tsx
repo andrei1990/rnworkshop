@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
 import {
   ActivityIndicator, StyleSheet, Text,
-  TouchableOpacity, View
+  TouchableOpacity, View, SafeAreaView
 } from 'react-native'
 import { connect } from 'react-redux'
-import ToDoDetailAction from '../actions/tododetail/ToDoDetailAction'
+import ToDoDetailAction from '../redux/todo/ToDoDetailAction'
 import ToDo from '../model/ToDo'
-import { iDataState } from '../state/IState'
-import ToDoDetailState from '../state/todo/ToDoDetailsState'
-import { DetailsScreenNavigationProp, DetailsScreenRouteProp } from '../ToDoApp'
+import { DetailsScreenNavigationProp, DetailsScreenRouteProp } from './MainScreen'
+import ToDoDetailState from '../redux/todo/ToDoDetailsState'
+import { iDataState } from '../redux/common/IState'
 
 
 
@@ -53,7 +53,7 @@ class ToDoDetail extends Component<ToDoDetailProps> {
     let loading = this.props.todoDetailData.state == iDataState.loading
     console.log(loading)
     return (
-        <View >
+        <SafeAreaView >
             <TouchableOpacity onPress={this.handlePress}>
                 <Text style={styles.backLink}>Back</Text>
             </TouchableOpacity>
@@ -65,7 +65,7 @@ class ToDoDetail extends Component<ToDoDetailProps> {
                 </View>
             </TouchableOpacity>
             <ActivityIndicator size="large"  color={'#999999'} animating={loading}/>
-      </View>
+      </SafeAreaView>
     )
   }
 }

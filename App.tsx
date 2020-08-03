@@ -5,9 +5,9 @@ import 'react-native-gesture-handler';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import { LoadingView } from './src/components/LoadingView';
-import ToDoDetails from './src/components/ToDoDetails';
-import { persistor, store } from './src/store';
-import ToDoAppNew from './src/ToDoApp';
+import ToDoDetails from './src/screens/ToDoDetails';
+import { persistor, store } from './src/redux/store';
+import ToDoAppNew from './src/screens/MainScreen';
 
 export type RootStackParamList = {
   Home: undefined;
