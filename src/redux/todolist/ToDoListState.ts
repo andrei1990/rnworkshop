@@ -1,5 +1,5 @@
-import { ToDos } from "../../model/ToDo";
+import {ToDos} from '../../model/ToDo'
 
-export default interface ToDoListState  {
-    todos: ToDos
-  }
+export default interface ToDoListState {
+  todos: ToDos;
+}

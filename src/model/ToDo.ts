@@ -1,8 +1,7 @@
+export declare type ToDos = ToDo[];
 
-export declare type ToDos = ToDo[]
-
-export  default interface ToDo  {
-    name: string | null,
-    id: string,
-    completed: boolean
+export default interface ToDo {
+  name: string | null;
+  id: string;
+  completed: boolean;
 }

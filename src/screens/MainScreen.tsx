@@ -1,12 +1,10 @@
-import { RouteProp } from '@react-navigation/native';
-import { StackNavigationProp } from '@react-navigation/stack';
-import React, { Component } from 'react';
-import { StyleSheet, View, SafeAreaView } from 'react-native';
-import { RootStackParamList } from '../../App';
-import ToDoListNew from '../components/ToDoList';
-import AdToDo from '../containers/AdToDo';
-
-
+import {RouteProp} from '@react-navigation/native'
+import {StackNavigationProp} from '@react-navigation/stack'
+import React, {Component} from 'react'
+import {SafeAreaView, StyleSheet} from 'react-native'
+import {RootStackParamList} from '../../App'
+import ToDoListNew from '../components/ToDoList'
+import AdToDo from '../containers/AdToDo'
 
 export type DetailsScreenNavigationProp = StackNavigationProp<
   RootStackParamList,
@@ -20,32 +18,21 @@ export type HomeScreenNavigationProp = StackNavigationProp<
 
 export type DetailsScreenRouteProp = RouteProp<RootStackParamList, 'Details'>;
 
-
-
-export default class ToDoAppNew extends Component{
-
-  
-
-  render(){
+export default class ToDoAppNew extends Component {
+  render() {
     return (
       <SafeAreaView style={styles.container}>
-        <AdToDo/>
-        <View style={{backgroundColor : '#00f0fe'}}>
-          <ToDoListNew/>
-        </View>
+        <AdToDo />
+        <ToDoListNew />
       </SafeAreaView>
-  );
+    )
   }
-
 }
-
-
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fefee4',
-    paddingTop: 10
-  }
-});
-
+    paddingTop: 10,
+  },
+})

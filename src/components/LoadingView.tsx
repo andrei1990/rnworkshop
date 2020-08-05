@@ -1,15 +1,12 @@
-import { FunctionComponent } from "react";
-import { TouchableOpacity, View, Text } from "react-native";
-import React from "react";
+import React, {FunctionComponent} from 'react'
+import {TouchableOpacity, View, Text} from 'react-native'
 
-
-export const  LoadingView: FunctionComponent<any> = () => {
-
-    return (
-      <TouchableOpacity>
-        <View>
-          <Text>Loading</Text>
-        </View>
-      </TouchableOpacity>
-    )
-  }
+export const LoadingView: FunctionComponent<any> = () => {
+  return (
+    <TouchableOpacity>
+      <View>
+        <Text>Loading</Text>
+      </View>
+    </TouchableOpacity>
+  )
+}

@@ -1,6 +1,5 @@
-import ToDoListState from "../todolist/ToDoListState";
-import ToDoDetailState from "../todo/ToDoDetailsState";
-import IState from "./IState";
+import ToDoDetailState from '../todo/ToDoDetailsState'
+import ToDoListState from '../todolist/ToDoListState'
 
 export default interface AppState {
   todoList: ToDoListState,
