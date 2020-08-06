@@ -32,7 +32,6 @@ export default class ToDoAppNew extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fefee4',
     paddingTop: 10,
   },
 })

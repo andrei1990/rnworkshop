@@ -1,9 +1,15 @@
-import React, {Component, RefObject} from 'react'
-import {Keyboard, TextInput, TouchableOpacity, View} from 'react-native'
-import Icon from 'react-native-ionicons'
-import {connect} from 'react-redux'
-import {Dispatch} from 'redux'
-import AppActions from '../redux/todolist/ToDoListActions'
+import React, { Component, RefObject } from "react";
+import {
+  Keyboard,
+  TextInput,
+  TouchableOpacity,
+  View,
+  StyleSheet,
+} from "react-native";
+import Icon from "react-native-ionicons";
+import { connect } from "react-redux";
+import { Dispatch } from "redux";
+import AppActions from "../redux/todolist/ToDoListActions";
 
 interface AdToDoProps {
   onAddToDo: (name: string) => any;
@@ -13,61 +19,65 @@ class AdToDoNew extends Component<AdToDoProps> {
   textInput: RefObject<TextInput>;
 
   constructor(props: AdToDoProps) {
-    super(props)
+    super(props);
     this.state = {
-      name: ''
-    }
-    this.textInput = React.createRef()
+      name: "",
+    };
+    this.textInput = React.createRef();
   }
 
   _onAdToDo = () => {
-    console.log('todo is')
-    console.log('adding to do')
-    console.log(this.state.name)
-    this.props.onAddToDo(this.state.name)
-    this.setState({name: ''})
-    this.textInput.current!.clear()
-    Keyboard.dismiss()
+    if(this.state.name === ''){
+        return
+    }
+    this.props.onAddToDo(this.state.name);
+    this.setState({ name: "" });
+    this.textInput.current!.clear();
+    Keyboard.dismiss();
   };
 
   _handleTextChange = (text: string) => {
-    console.log('text changed')
-    console.log(text)
-    this.setState({name: text})
+    this.setState({ name: text });
   };
 
   render() {
     return (
-      <View style={{flexDirection: 'row', marginHorizontal: 15}}>
+      <View style={styles.container}>
         <TextInput
           ref={this.textInput}
-          placeholder="Create new to do"
+          placeholder="Add new to do"
           onChangeText={(value) => this._handleTextChange(value)}
-          style={{
-            borderWidth: 1,
-            borderColor: '#f2f2e1',
-            backgroundColor: '#eaeaea',
-            height: 50,
-            flex: 1,
-            padding: 5,
-          }}
+          onSubmitEditing={this._onAdToDo}
+          style={styles.todoInput}
         />
-        <TouchableOpacity onPress={() => this._onAdToDo()}>
-          <View style={{backgroundColor: '#eaeaea', height: 50}}>
-            <Icon name="add" />
-          </View>
+        <TouchableOpacity  onPress={() => this._onAdToDo()}>
+            <Icon  name="add" />
         </TouchableOpacity>
       </View>
-    )
+    );
   }
 }
 
 const mapDipatchToProps = (dispatch: Dispatch) => ({
   onAddToDo: (name: string) => {
-    dispatch(AppActions.addToDo(name))
+    dispatch(AppActions.addToDo(name));
   },
-})
+});
 
-const AdToDo = connect(null, mapDipatchToProps)(AdToDoNew)
+const AdToDo = connect(null, mapDipatchToProps)(AdToDoNew);
 
-export default AdToDo
+export default AdToDo;
+
+const styles = StyleSheet.create({
+  todoInput: {
+    borderWidth: 1,
+    borderColor: "#eaeaea",
+    flex: 1,
+  },
+  container: {
+    flexDirection: "row",
+    marginHorizontal: 5,
+    backgroundColor: "#eaeaea",
+    alignItems: 'center'
+  },
+});

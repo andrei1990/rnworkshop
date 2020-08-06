@@ -33,6 +33,5 @@ export default connect(mapStateToProps, null)(ToDoListNew)
 
 const styles = StyleSheet.create({
   list: {
-    backgroundColor: '#eeeaaa',
   },
 })
