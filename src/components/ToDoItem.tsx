@@ -1,10 +1,10 @@
 import { useNavigation } from "@react-navigation/native";
-import React, { FunctionComponent } from "react";
-import { StyleSheet, Text, TouchableOpacity, View, Alert } from "react-native";
-import ToDo from "../model/ToDo";
-import { HomeScreenNavigationProp } from "../screens/MainScreen";
-import AppActions from "../redux/todolist/ToDoListActions";
+import React, { FunctionComponent, useState, useEffect } from "react";
+import { Alert, StyleSheet, Text, TouchableOpacity } from "react-native";
 import { connect } from "react-redux";
+import ToDo from "../model/ToDo";
+import AppActions from "../redux/todolist/ToDoListActions";
+import { HomeScreenNavigationProp } from "../screens/MainScreen";
 
 type ToDoItemProps = {
   todo: ToDo;
@@ -13,6 +13,19 @@ type ToDoItemProps = {
 
 const ToDoItem: FunctionComponent<ToDoItemProps> = ({ todo, completeToDo }) => {
   const navigation = useNavigation<HomeScreenNavigationProp>();
+  const [message, setMessage] = useState("");
+
+  // Similar to componentDidMount and componentDidUpdate:
+  useEffect(() => {
+    const completedStatusMessage = (): string => {
+      console.log("is todo completed");
+      console.log(todo.completed);
+      // eslint-disable-next-line no-shadow
+      const message = todo.completed ? "completed" : "in progress";
+      return message;
+    };
+    setMessage(completedStatusMessage());
+  }, [todo.completed]);
 
   const handlePress = () => {
     navigation.navigate("Details", {
@@ -62,20 +75,19 @@ const ToDoItem: FunctionComponent<ToDoItemProps> = ({ todo, completeToDo }) => {
 
   return (
     <TouchableOpacity
-      style={styles.todo}
       onPress={handlePress}
       onLongPress={_handlerLongClick}
+      style={styles.container}
     >
-      <View style={styles.info}>
-        <Text style={styles.title}>{todo.name}</Text>
-        <View
-          style={{
-            backgroundColor: completedStatusColor(),
-            width: "100%",
-            height: 15,
-          }}
-        />
-      </View>
+      <Text style={styles.title}>{todo.name}</Text>
+      <Text
+        style={[
+          styles.todoCompletion,
+          { backgroundColor: completedStatusColor() },
+        ]}
+      >
+        {message}
+      </Text>
     </TouchableOpacity>
   );
 };
@@ -91,35 +103,22 @@ function mapDispatchToProps(dispatch: any) {
 export default connect(null, mapDispatchToProps)(ToDoItem);
 
 const styles = StyleSheet.create({
-  todo: {
-    marginHorizontal: 16,
-    marginTop: 16,
-  },
-  image: {
+  todoCompletion: {
     width: "100%",
-    height: 150,
-    backgroundColor: "#ccc",
   },
-  info: {
-    padding: 10,
+  container: {
+    margin: 5,
     backgroundColor: "#fff",
     borderColor: "#bbb",
     borderWidth: 1,
     borderTopWidth: 0,
   },
   title: {
+    paddingStart: 5,
     fontSize: 16,
     fontWeight: "bold",
+    borderColor: "#bbb1ef",
+    backgroundColor: "#fff123",
     marginBottom: 5,
-  },
-  footer: {
-    flexDirection: "row",
-  },
-  cause: {
-    flex: 2,
-  },
-  price: {
-    flex: 1,
-    textAlign: "right",
   },
 });
