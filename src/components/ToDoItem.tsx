@@ -4,6 +4,9 @@ import { connect } from "react-redux";
 import ToDo from "../model/ToDo";
 import AppActions from "../redux/todolist/ToDoListActions";
 import DoubleTap from "./common/DoubleTap";
+import strings from "res/strings";
+import Colors from "res/colors";
+import pallete from "res/pallete";
 
 type ToDoItemProps = {
   todo: ToDo;
@@ -11,8 +14,6 @@ type ToDoItemProps = {
 };
 
 const ToDoItem: FunctionComponent<ToDoItemProps> = ({ todo, completeToDo }) => {
-
-
   const _completeToDo = () => {
     console.log("complete to do");
     completeToDo(todo);
@@ -21,7 +22,9 @@ const ToDoItem: FunctionComponent<ToDoItemProps> = ({ todo, completeToDo }) => {
   const textDecorationLine = (): string => {
     console.log("is todo completed");
     console.log(todo.completed);
-    const strokeType = todo.completed ? "line-through" : "none";
+    const strokeType = todo.completed
+      ? strings.textDecoration.strikeThrough
+      : strings.textDecoration.none;
     return strokeType;
   };
 
@@ -54,16 +57,9 @@ const styles = StyleSheet.create({
   },
   container: {
     margin: 5,
-    borderColor: "#bbb",
-    backgroundColor: "#bbbbbb",
-    borderWidth: 1,
-    borderTopWidth: 0,
+    backgroundColor: Colors.listItem.background,
+    borderRadius: 5,
+    borderWidth: 0.5,
   },
-  title: {
-    paddingStart: 5,
-    fontSize: 16,
-    fontWeight: "bold",
-    borderColor: "#bbb1ef",
-    marginBottom: 5,
-  },
+  title: { ...pallete.title, paddingStart: 10, marginBottom: 3 },
 });

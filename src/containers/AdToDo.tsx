@@ -10,6 +10,8 @@ import Icon from "react-native-ionicons";
 import { connect } from "react-redux";
 import { Dispatch } from "redux";
 import AppActions from "../redux/todolist/ToDoListActions";
+import Colors from "res/colors";
+import strings from 'res/strings'
 
 interface AdToDoProps {
   onAddToDo: (name: string) => any;
@@ -27,8 +29,8 @@ class AdToDoNew extends Component<AdToDoProps> {
   }
 
   _onAdToDo = () => {
-    if(this.state.name === ''){
-        return
+    if (this.state.name === "") {
+      return;
     }
     this.props.onAddToDo(this.state.name);
     this.setState({ name: "" });
@@ -45,13 +47,13 @@ class AdToDoNew extends Component<AdToDoProps> {
       <View style={styles.container}>
         <TextInput
           ref={this.textInput}
-          placeholder="Add new to do"
+          placeholder={strings.addToDo}
           onChangeText={(value) => this._handleTextChange(value)}
           onSubmitEditing={this._onAdToDo}
           style={styles.todoInput}
         />
-        <TouchableOpacity  onPress={() => this._onAdToDo()}>
-            <Icon  name="add" />
+        <TouchableOpacity onPress={() => this._onAdToDo()}>
+          <Icon name={strings.iconAdd} />
         </TouchableOpacity>
       </View>
     );
@@ -71,13 +73,13 @@ export default AdToDo;
 const styles = StyleSheet.create({
   todoInput: {
     borderWidth: 1,
-    borderColor: "#eaeaea",
+    borderColor: Colors.background,
     flex: 1,
   },
   container: {
     flexDirection: "row",
     marginHorizontal: 5,
-    backgroundColor: "#eaeaea",
-    alignItems: 'center'
+    backgroundColor: Colors.background,
+    alignItems: "center",
   },
 });
