@@ -8,10 +8,12 @@ import AppState from '../common/AppState'
 import dataSaga from '../common/SagaFactory'
 import ToDoDetailReducer from '../todo/ToDoDetailsReducer'
 import AppReducer from '../todolist/ToDoListReducer'
+import AuthReducer from '../login/Reducer'
 
 const rootReducer = combineReducers<AppState>({
   todoList: AppReducer.reducer,
   detail: ToDoDetailReducer.reducer,
+  auth: AuthReducer.reducer,
 })
 
 const persistConfig = {

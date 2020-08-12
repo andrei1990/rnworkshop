@@ -15,12 +15,15 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* rnworkshopTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* rnworkshopTests.m */; };
-		3BF70CA048B2C06E82C940C5 /* libPods-rnworkshop.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 862FBF487CF13B5B67AF4CA6 /* libPods-rnworkshop.a */; };
-		426BC28C103FCCEB98DEAD7B /* libPods-rnworkshop-rnworkshopTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F27782BED1DCF724D8517662 /* libPods-rnworkshop-rnworkshopTests.a */; };
+		3CECC27709D4D2E321635AF1 /* libPods-todos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DDDA273F8FBB261693D7ABB /* libPods-todos.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		8C262A62AE41929E18D14EA9 /* libPods-todos-rnworkshopTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 98F285F8C7AD10AEB584F8A7 /* libPods-todos-rnworkshopTests.a */; };
 		97BDAB29AA767B2BAF45A15C /* libPods-rnworkshop-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F4884BF8B3F034CBF5E21C9B /* libPods-rnworkshop-tvOSTests.a */; };
 		BE4B3604BB11CDAD48E9096F /* libPods-rnworkshop-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B916C2F4D1D0E72229C3BF2 /* libPods-rnworkshop-tvOS.a */; };
 		DFC653F77CE8426EB6390EC6 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 44C539DA02F84EA18FAE4B7A /* Ionicons.ttf */; };
+		E54B50AA24E295E600EA3C69 /* RNGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = E54B50A924E295E600EA3C69 /* RNGradientView.m */; };
+		E54B50AC24E2960400EA3C69 /* RNGradientViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E54B50AB24E2960400EA3C69 /* RNGradientViewManager.m */; };
+		E54B50AE24E2DF0B00EA3C69 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E54B50AD24E2DF0B00EA3C69 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +50,7 @@
 		00E356F21AD99517003FC87E /* rnworkshopTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = rnworkshopTests.m; sourceTree = "<group>"; };
 		01184377C3BD761F2E8B9F17 /* Pods-rnworkshop-rnworkshopTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rnworkshop-rnworkshopTests.debug.xcconfig"; path = "Target Support Files/Pods-rnworkshop-rnworkshopTests/Pods-rnworkshop-rnworkshopTests.debug.xcconfig"; sourceTree = "<group>"; };
 		07FC78DCA6FBA7D080550484 /* Pods-rnworkshop-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rnworkshop-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-rnworkshop-tvOS/Pods-rnworkshop-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* rnworkshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rnworkshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07F961A680F5B00A75B9A /* xtra-todos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "xtra-todos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = rnworkshop/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = rnworkshop/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = rnworkshop/Images.xcassets; sourceTree = "<group>"; };
@@ -57,18 +60,27 @@
 		2D02E47B1E0B4A5D006451C7 /* rnworkshop-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rnworkshop-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* rnworkshop-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "rnworkshop-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37E126D4D28C809539B6069B /* Pods-rnworkshop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rnworkshop.release.xcconfig"; path = "Target Support Files/Pods-rnworkshop/Pods-rnworkshop.release.xcconfig"; sourceTree = "<group>"; };
+		44C539DA02F84EA18FAE4B7A /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-ionicons/fonts/Ionicons.ttf"; sourceTree = "<group>"; };
+		4CC18D5247B66963F64C2CE0 /* Pods-todos-rnworkshopTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-todos-rnworkshopTests.release.xcconfig"; path = "Target Support Files/Pods-todos-rnworkshopTests/Pods-todos-rnworkshopTests.release.xcconfig"; sourceTree = "<group>"; };
+		4DDDA273F8FBB261693D7ABB /* libPods-todos.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-todos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		739F2ED263C809F36210C9B3 /* Pods-rnworkshop-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rnworkshop-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-rnworkshop-tvOSTests/Pods-rnworkshop-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		812DE20DDDF7FFB5364771BB /* Pods-rnworkshop-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rnworkshop-tvOS.release.xcconfig"; path = "Target Support Files/Pods-rnworkshop-tvOS/Pods-rnworkshop-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = rnworkshop/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		862FBF487CF13B5B67AF4CA6 /* libPods-rnworkshop.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-rnworkshop.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		98F285F8C7AD10AEB584F8A7 /* libPods-todos-rnworkshopTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-todos-rnworkshopTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A263AD8FC637847B94206471 /* Pods-todos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-todos.release.xcconfig"; path = "Target Support Files/Pods-todos/Pods-todos.release.xcconfig"; sourceTree = "<group>"; };
+		AF93E3AC06C565A98A1D39E5 /* Pods-todos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-todos.debug.xcconfig"; path = "Target Support Files/Pods-todos/Pods-todos.debug.xcconfig"; sourceTree = "<group>"; };
 		D843D5365DD96490E5829562 /* Pods-rnworkshop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rnworkshop.debug.xcconfig"; path = "Target Support Files/Pods-rnworkshop/Pods-rnworkshop.debug.xcconfig"; sourceTree = "<group>"; };
 		DB585C9A3C637274A0ACE4F1 /* Pods-rnworkshop-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rnworkshop-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-rnworkshop-tvOSTests/Pods-rnworkshop-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E54B50A724E295AE00EA3C69 /* RNGradientViewManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNGradientViewManager.h; sourceTree = "<group>"; };
+		E54B50A824E295CC00EA3C69 /* RNGradientView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNGradientView.h; sourceTree = "<group>"; };
+		E54B50A924E295E600EA3C69 /* RNGradientView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNGradientView.m; sourceTree = "<group>"; };
+		E54B50AB24E2960400EA3C69 /* RNGradientViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNGradientViewManager.m; sourceTree = "<group>"; };
+		E54B50AD24E2DF0B00EA3C69 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "rnworkshop/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EA3A9ABE35DB7C5136B6A259 /* Pods-todos-rnworkshopTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-todos-rnworkshopTests.debug.xcconfig"; path = "Target Support Files/Pods-todos-rnworkshopTests/Pods-todos-rnworkshopTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		F1B8460BFE9252BD4504C4EC /* Pods-rnworkshop-rnworkshopTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rnworkshop-rnworkshopTests.release.xcconfig"; path = "Target Support Files/Pods-rnworkshop-rnworkshopTests/Pods-rnworkshop-rnworkshopTests.release.xcconfig"; sourceTree = "<group>"; };
-		F27782BED1DCF724D8517662 /* libPods-rnworkshop-rnworkshopTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-rnworkshop-rnworkshopTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4884BF8B3F034CBF5E21C9B /* libPods-rnworkshop-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-rnworkshop-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		44C539DA02F84EA18FAE4B7A /* Ionicons.ttf */ = {isa = PBXFileReference; name = "Ionicons.ttf"; path = "../node_modules/react-native-ionicons/fonts/Ionicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				426BC28C103FCCEB98DEAD7B /* libPods-rnworkshop-rnworkshopTests.a in Frameworks */,
+				8C262A62AE41929E18D14EA9 /* libPods-todos-rnworkshopTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,7 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BF70CA048B2C06E82C940C5 /* libPods-rnworkshop.a in Frameworks */,
+				3CECC27709D4D2E321635AF1 /* libPods-todos.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,10 +139,12 @@
 		13B07FAE1A68108700A75B9A /* rnworkshop */ = {
 			isa = PBXGroup;
 			children = (
+				E54B50A624E2954500EA3C69 /* NativeComponents */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
+				E54B50AD24E2DF0B00EA3C69 /* GoogleService-Info.plist */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
@@ -143,10 +157,10 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				862FBF487CF13B5B67AF4CA6 /* libPods-rnworkshop.a */,
-				F27782BED1DCF724D8517662 /* libPods-rnworkshop-rnworkshopTests.a */,
 				1B916C2F4D1D0E72229C3BF2 /* libPods-rnworkshop-tvOS.a */,
 				F4884BF8B3F034CBF5E21C9B /* libPods-rnworkshop-tvOSTests.a */,
+				4DDDA273F8FBB261693D7ABB /* libPods-todos.a */,
+				98F285F8C7AD10AEB584F8A7 /* libPods-todos-rnworkshopTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -162,8 +176,11 @@
 				812DE20DDDF7FFB5364771BB /* Pods-rnworkshop-tvOS.release.xcconfig */,
 				DB585C9A3C637274A0ACE4F1 /* Pods-rnworkshop-tvOSTests.debug.xcconfig */,
 				739F2ED263C809F36210C9B3 /* Pods-rnworkshop-tvOSTests.release.xcconfig */,
+				AF93E3AC06C565A98A1D39E5 /* Pods-todos.debug.xcconfig */,
+				A263AD8FC637847B94206471 /* Pods-todos.release.xcconfig */,
+				EA3A9ABE35DB7C5136B6A259 /* Pods-todos-rnworkshopTests.debug.xcconfig */,
+				4CC18D5247B66963F64C2CE0 /* Pods-todos-rnworkshopTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -193,7 +210,7 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* rnworkshop.app */,
+				13B07F961A680F5B00A75B9A /* xtra-todos.app */,
 				00E356EE1AD99517003FC87E /* rnworkshopTests.xctest */,
 				2D02E47B1E0B4A5D006451C7 /* rnworkshop-tvOS.app */,
 				2D02E4901E0B4A5D006451C7 /* rnworkshop-tvOSTests.xctest */,
@@ -201,14 +218,24 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		E54B50A624E2954500EA3C69 /* NativeComponents */ = {
+			isa = PBXGroup;
+			children = (
+				E54B50A724E295AE00EA3C69 /* RNGradientViewManager.h */,
+				E54B50A824E295CC00EA3C69 /* RNGradientView.h */,
+				E54B50A924E295E600EA3C69 /* RNGradientView.m */,
+				E54B50AB24E2960400EA3C69 /* RNGradientViewManager.m */,
+			);
+			path = NativeComponents;
+			sourceTree = "<group>";
+		};
 		F496AE88C7E84ACAA5088383 /* Resources */ = {
-			isa = "PBXGroup";
+			isa = PBXGroup;
 			children = (
 				44C539DA02F84EA18FAE4B7A /* Ionicons.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
-			path = "";
 		};
 /* End PBXGroup section */
 
@@ -233,9 +260,9 @@
 			productReference = 00E356EE1AD99517003FC87E /* rnworkshopTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* rnworkshop */ = {
+		13B07F861A680F5B00A75B9A /* todos */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "rnworkshop" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "todos" */;
 			buildPhases = (
 				F5185E376AB0A8A7D92D7195 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
@@ -249,9 +276,9 @@
 			);
 			dependencies = (
 			);
-			name = rnworkshop;
+			name = todos;
 			productName = rnworkshop;
-			productReference = 13B07F961A680F5B00A75B9A /* rnworkshop.app */;
+			productReference = 13B07F961A680F5B00A75B9A /* xtra-todos.app */;
 			productType = "com.apple.product-type.application";
 		};
 		2D02E47A1E0B4A5D006451C7 /* rnworkshop-tvOS */ = {
@@ -332,7 +359,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* rnworkshop */,
+				13B07F861A680F5B00A75B9A /* todos */,
 				00E356ED1AD99517003FC87E /* rnworkshopTests */,
 				2D02E47A1E0B4A5D006451C7 /* rnworkshop-tvOS */,
 				2D02E48F1E0B4A5D006451C7 /* rnworkshop-tvOSTests */,
@@ -353,6 +380,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				E54B50AE24E2DF0B00EA3C69 /* GoogleService-Info.plist in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				DFC653F77CE8426EB6390EC6 /* Ionicons.ttf in Resources */,
 			);
@@ -410,7 +438,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-rnworkshop/Pods-rnworkshop-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-todos/Pods-todos-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -419,7 +447,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-rnworkshop/Pods-rnworkshop-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-todos/Pods-todos-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		618FF29EEBCB92B5DE349AB1 /* [CP] Copy Pods Resources */ = {
@@ -428,7 +456,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-rnworkshop-rnworkshopTests/Pods-rnworkshop-rnworkshopTests-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-todos-rnworkshopTests/Pods-todos-rnworkshopTests-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -437,7 +465,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-rnworkshop-rnworkshopTests/Pods-rnworkshop-rnworkshopTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-todos-rnworkshopTests/Pods-todos-rnworkshopTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9C4C2989B2439E9BE59E484C /* [CP] Check Pods Manifest.lock */ = {
@@ -499,7 +527,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-rnworkshop-rnworkshopTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-todos-rnworkshopTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -521,7 +549,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-rnworkshop-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-todos-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -583,6 +611,8 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				E54B50AC24E2960400EA3C69 /* RNGradientViewManager.m in Sources */,
+				E54B50AA24E295E600EA3C69 /* RNGradientView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -608,7 +638,7 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* rnworkshop */;
+			target = 13B07F861A680F5B00A75B9A /* todos */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 		2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */ = {
@@ -621,7 +651,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 01184377C3BD761F2E8B9F17 /* Pods-rnworkshop-rnworkshopTests.debug.xcconfig */;
+			baseConfigurationReference = EA3A9ABE35DB7C5136B6A259 /* Pods-todos-rnworkshopTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -644,7 +674,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F1B8460BFE9252BD4504C4EC /* Pods-rnworkshop-rnworkshopTests.release.xcconfig */;
+			baseConfigurationReference = 4CC18D5247B66963F64C2CE0 /* Pods-todos-rnworkshopTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -664,7 +694,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D843D5365DD96490E5829562 /* Pods-rnworkshop.debug.xcconfig */;
+			baseConfigurationReference = AF93E3AC06C565A98A1D39E5 /* Pods-todos.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -677,8 +707,8 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = rnworkshop;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.todos;
+				PRODUCT_NAME = "xtra-todos";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -687,7 +717,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 37E126D4D28C809539B6069B /* Pods-rnworkshop.release.xcconfig */;
+			baseConfigurationReference = A263AD8FC637847B94206471 /* Pods-todos.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -699,8 +729,8 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = rnworkshop;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.todos;
+				PRODUCT_NAME = "xtra-todos";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -941,7 +971,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "rnworkshop" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "todos" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,

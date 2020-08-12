@@ -8,6 +8,10 @@ import strings from "res/strings";
 import Colors from "res/colors";
 import pallete from "res/pallete";
 
+
+
+
+
 type ToDoItemProps = {
   todo: ToDo;
   completeToDo: (todo: ToDo) => any;
@@ -36,6 +40,7 @@ const ToDoItem: FunctionComponent<ToDoItemProps> = ({ todo, completeToDo }) => {
         >
           {todo.name}
         </Text>
+    
       </DoubleTap>
     </View>
   );
@@ -54,6 +59,7 @@ export default connect(null, mapDispatchToProps)(ToDoItem);
 const styles = StyleSheet.create({
   todoCompletion: {
     width: "100%",
+    height: 15
   },
   container: {
     margin: 5,
