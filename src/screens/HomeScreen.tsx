@@ -31,36 +31,20 @@ export type HomeScreenNavigationProp = StackNavigationProp<
 
 export type DetailsScreenRouteProp = RouteProp<RootStackParamList, "Details">;
 
-type HomeProps = {
-   signOut: () => any
-};
 
-class HomeScreen extends Component<HomeProps> {
+class Home extends Component {
 
 
   render() {
     return (
       <SafeAreaView>
         <AdToDo />
-        <TouchableOpacity onPress={() => this.props.signOut()}>
-          <Text>Sign Out</Text>
-        </TouchableOpacity>
         <ToDoListNew />
       </SafeAreaView>
     );
   }
 
 }
-
-function mapDispatchToProps(dispatch: any) {
-  return {
-    signOut: () => {
-      dispatch(AuthActions.signOut());
-    },
-  };
-}
-
-const Home = connect(null, mapDispatchToProps)(HomeScreen);
 
 export default Home
 
