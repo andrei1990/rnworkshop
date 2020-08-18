@@ -7,7 +7,10 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "runSim":"react-native run-ios  --scheme Beta --configuration Debug.Beta",
+    "AndroidDev": "react-native run-android --variant=devDebug --appIdSuffix=dev"
+
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.11.0",

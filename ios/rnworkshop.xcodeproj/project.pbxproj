@@ -50,12 +50,14 @@
 		00E356F21AD99517003FC87E /* rnworkshopTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = rnworkshopTests.m; sourceTree = "<group>"; };
 		01184377C3BD761F2E8B9F17 /* Pods-rnworkshop-rnworkshopTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rnworkshop-rnworkshopTests.debug.xcconfig"; path = "Target Support Files/Pods-rnworkshop-rnworkshopTests/Pods-rnworkshop-rnworkshopTests.debug.xcconfig"; sourceTree = "<group>"; };
 		07FC78DCA6FBA7D080550484 /* Pods-rnworkshop-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rnworkshop-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-rnworkshop-tvOS/Pods-rnworkshop-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		0F160FB9DCF9A30B5C1F43B4 /* Pods-todos-rnworkshopTests.release.beta.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-todos-rnworkshopTests.release.beta.xcconfig"; path = "Target Support Files/Pods-todos-rnworkshopTests/Pods-todos-rnworkshopTests.release.beta.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* xtra-todos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "xtra-todos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = rnworkshop/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = rnworkshop/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = rnworkshop/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = rnworkshop/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = rnworkshop/main.m; sourceTree = "<group>"; };
+		15EDC767745DADEABAD66AE4 /* Pods-rnworkshop-tvOSTests.release.beta.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rnworkshop-tvOSTests.release.beta.xcconfig"; path = "Target Support Files/Pods-rnworkshop-tvOSTests/Pods-rnworkshop-tvOSTests.release.beta.xcconfig"; sourceTree = "<group>"; };
 		1B916C2F4D1D0E72229C3BF2 /* libPods-rnworkshop-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-rnworkshop-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E47B1E0B4A5D006451C7 /* rnworkshop-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rnworkshop-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* rnworkshop-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "rnworkshop-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,12 +65,18 @@
 		44C539DA02F84EA18FAE4B7A /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-ionicons/fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		4CC18D5247B66963F64C2CE0 /* Pods-todos-rnworkshopTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-todos-rnworkshopTests.release.xcconfig"; path = "Target Support Files/Pods-todos-rnworkshopTests/Pods-todos-rnworkshopTests.release.xcconfig"; sourceTree = "<group>"; };
 		4DDDA273F8FBB261693D7ABB /* libPods-todos.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-todos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5043469631BD137B3F908CE9 /* Pods-rnworkshop-tvOS.debug.beta.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rnworkshop-tvOS.debug.beta.xcconfig"; path = "Target Support Files/Pods-rnworkshop-tvOS/Pods-rnworkshop-tvOS.debug.beta.xcconfig"; sourceTree = "<group>"; };
+		5E64571890CF505B7D43D207 /* Pods-todos-rnworkshopTests.debug.beta.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-todos-rnworkshopTests.debug.beta.xcconfig"; path = "Target Support Files/Pods-todos-rnworkshopTests/Pods-todos-rnworkshopTests.debug.beta.xcconfig"; sourceTree = "<group>"; };
+		67DA1F0D1318E2056BF454D5 /* Pods-todos.release.beta.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-todos.release.beta.xcconfig"; path = "Target Support Files/Pods-todos/Pods-todos.release.beta.xcconfig"; sourceTree = "<group>"; };
 		739F2ED263C809F36210C9B3 /* Pods-rnworkshop-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rnworkshop-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-rnworkshop-tvOSTests/Pods-rnworkshop-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		812DE20DDDF7FFB5364771BB /* Pods-rnworkshop-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rnworkshop-tvOS.release.xcconfig"; path = "Target Support Files/Pods-rnworkshop-tvOS/Pods-rnworkshop-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = rnworkshop/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		98F285F8C7AD10AEB584F8A7 /* libPods-todos-rnworkshopTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-todos-rnworkshopTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A263AD8FC637847B94206471 /* Pods-todos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-todos.release.xcconfig"; path = "Target Support Files/Pods-todos/Pods-todos.release.xcconfig"; sourceTree = "<group>"; };
+		AA0878ADE0A1727AF4E9B75A /* Pods-todos.debug.beta.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-todos.debug.beta.xcconfig"; path = "Target Support Files/Pods-todos/Pods-todos.debug.beta.xcconfig"; sourceTree = "<group>"; };
 		AF93E3AC06C565A98A1D39E5 /* Pods-todos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-todos.debug.xcconfig"; path = "Target Support Files/Pods-todos/Pods-todos.debug.xcconfig"; sourceTree = "<group>"; };
+		B0F7C6DD5AA06817E662F9D3 /* Pods-rnworkshop-tvOS.release.beta.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rnworkshop-tvOS.release.beta.xcconfig"; path = "Target Support Files/Pods-rnworkshop-tvOS/Pods-rnworkshop-tvOS.release.beta.xcconfig"; sourceTree = "<group>"; };
+		B736B5F5FF63055CD114C1B1 /* Pods-rnworkshop-tvOSTests.debug.beta.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rnworkshop-tvOSTests.debug.beta.xcconfig"; path = "Target Support Files/Pods-rnworkshop-tvOSTests/Pods-rnworkshop-tvOSTests.debug.beta.xcconfig"; sourceTree = "<group>"; };
 		D843D5365DD96490E5829562 /* Pods-rnworkshop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rnworkshop.debug.xcconfig"; path = "Target Support Files/Pods-rnworkshop/Pods-rnworkshop.debug.xcconfig"; sourceTree = "<group>"; };
 		DB585C9A3C637274A0ACE4F1 /* Pods-rnworkshop-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rnworkshop-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-rnworkshop-tvOSTests/Pods-rnworkshop-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E54B50A724E295AE00EA3C69 /* RNGradientViewManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNGradientViewManager.h; sourceTree = "<group>"; };
@@ -180,6 +188,14 @@
 				A263AD8FC637847B94206471 /* Pods-todos.release.xcconfig */,
 				EA3A9ABE35DB7C5136B6A259 /* Pods-todos-rnworkshopTests.debug.xcconfig */,
 				4CC18D5247B66963F64C2CE0 /* Pods-todos-rnworkshopTests.release.xcconfig */,
+				5043469631BD137B3F908CE9 /* Pods-rnworkshop-tvOS.debug.beta.xcconfig */,
+				B0F7C6DD5AA06817E662F9D3 /* Pods-rnworkshop-tvOS.release.beta.xcconfig */,
+				B736B5F5FF63055CD114C1B1 /* Pods-rnworkshop-tvOSTests.debug.beta.xcconfig */,
+				15EDC767745DADEABAD66AE4 /* Pods-rnworkshop-tvOSTests.release.beta.xcconfig */,
+				AA0878ADE0A1727AF4E9B75A /* Pods-todos.debug.beta.xcconfig */,
+				67DA1F0D1318E2056BF454D5 /* Pods-todos.release.beta.xcconfig */,
+				5E64571890CF505B7D43D207 /* Pods-todos-rnworkshopTests.debug.beta.xcconfig */,
+				0F160FB9DCF9A30B5C1F43B4 /* Pods-todos-rnworkshopTests.release.beta.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -697,6 +713,7 @@
 			baseConfigurationReference = AF93E3AC06C565A98A1D39E5 /* Pods-todos.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BUNDLE_ID_SUFFIX = "";
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
@@ -720,6 +737,7 @@
 			baseConfigurationReference = A263AD8FC637847B94206471 /* Pods-todos.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BUNDLE_ID_SUFFIX = "";
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = rnworkshop/Info.plist;
@@ -959,6 +977,318 @@
 			};
 			name = Release;
 		};
+		E54B50AF24EC028D00EA3C69 /* Debug.Beta */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "/usr/lib/swift $(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
+					"\"$(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)\"",
+					"\"$(inherited)\"",
+				);
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug.Beta;
+		};
+		E54B50B024EC028D00EA3C69 /* Debug.Beta */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA0878ADE0A1727AF4E9B75A /* Pods-todos.debug.beta.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BUNDLE_ID_SUFFIX = .beta;
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = rnworkshop/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.todos;
+				PRODUCT_NAME = "xtra-todos Beta";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug.Beta;
+		};
+		E54B50B124EC028D00EA3C69 /* Debug.Beta */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E64571890CF505B7D43D207 /* Pods-todos-rnworkshopTests.debug.beta.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = rnworkshopTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+					"$(inherited)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/rnworkshop.app/rnworkshop";
+			};
+			name = Debug.Beta;
+		};
+		E54B50B224EC028D00EA3C69 /* Debug.Beta */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5043469631BD137B3F908CE9 /* Pods-rnworkshop-tvOS.debug.beta.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "rnworkshop-tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.rnworkshop-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug.Beta;
+		};
+		E54B50B324EC028D00EA3C69 /* Debug.Beta */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B736B5F5FF63055CD114C1B1 /* Pods-rnworkshop-tvOSTests.debug.beta.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "rnworkshop-tvOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.rnworkshop-tvOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/rnworkshop-tvOS.app/rnworkshop-tvOS";
+				TVOS_DEPLOYMENT_TARGET = 10.1;
+			};
+			name = Debug.Beta;
+		};
+		E54B50B424EC029800EA3C69 /* Release.Beta */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "/usr/lib/swift $(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
+					"\"$(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)\"",
+					"\"$(inherited)\"",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release.Beta;
+		};
+		E54B50B524EC029800EA3C69 /* Release.Beta */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67DA1F0D1318E2056BF454D5 /* Pods-todos.release.beta.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BUNDLE_ID_SUFFIX = .beta;
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = rnworkshop/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.todos;
+				PRODUCT_NAME = "xtra-todos Beta";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release.Beta;
+		};
+		E54B50B624EC029800EA3C69 /* Release.Beta */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F160FB9DCF9A30B5C1F43B4 /* Pods-todos-rnworkshopTests.release.beta.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COPY_PHASE_STRIP = NO;
+				INFOPLIST_FILE = rnworkshopTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+					"$(inherited)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/rnworkshop.app/rnworkshop";
+			};
+			name = Release.Beta;
+		};
+		E54B50B724EC029800EA3C69 /* Release.Beta */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0F7C6DD5AA06817E662F9D3 /* Pods-rnworkshop-tvOS.release.beta.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "rnworkshop-tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.rnworkshop-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release.Beta;
+		};
+		E54B50B824EC029800EA3C69 /* Release.Beta */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15EDC767745DADEABAD66AE4 /* Pods-rnworkshop-tvOSTests.release.beta.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "rnworkshop-tvOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.rnworkshop-tvOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/rnworkshop-tvOS.app/rnworkshop-tvOS";
+				TVOS_DEPLOYMENT_TARGET = 10.1;
+			};
+			name = Release.Beta;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -966,7 +1296,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
+				E54B50B124EC028D00EA3C69 /* Debug.Beta */,
 				00E356F71AD99517003FC87E /* Release */,
+				E54B50B624EC029800EA3C69 /* Release.Beta */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -975,7 +1307,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
+				E54B50B024EC028D00EA3C69 /* Debug.Beta */,
 				13B07F951A680F5B00A75B9A /* Release */,
+				E54B50B524EC029800EA3C69 /* Release.Beta */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -984,7 +1318,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4971E0B4A5E006451C7 /* Debug */,
+				E54B50B224EC028D00EA3C69 /* Debug.Beta */,
 				2D02E4981E0B4A5E006451C7 /* Release */,
+				E54B50B724EC029800EA3C69 /* Release.Beta */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -993,7 +1329,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4991E0B4A5E006451C7 /* Debug */,
+				E54B50B324EC028D00EA3C69 /* Debug.Beta */,
 				2D02E49A1E0B4A5E006451C7 /* Release */,
+				E54B50B824EC029800EA3C69 /* Release.Beta */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1002,7 +1340,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,
+				E54B50AF24EC028D00EA3C69 /* Debug.Beta */,
 				83CBBA211A601CBA00E9B192 /* Release */,
+				E54B50B424EC029800EA3C69 /* Release.Beta */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
