@@ -13,7 +13,7 @@ import ToDo from '../model/ToDo'
 import {
   DetailsScreenNavigationProp,
   DetailsScreenRouteProp,
-} from './HomeScreen'
+} from './HomeScreen/HomeScreen'
 import ToDoDetailState from '../redux/todo/ToDoDetailsState'
 import {iDataState} from '../redux/common/IState'
 

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Image, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import styles from './styles';
-import { RegisterScreenNavigationProp } from '../HomeScreen';
+import { RegisterScreenNavigationProp } from '../HomeScreen/HomeScreen';
 import firebaseApp from '../../firebase/config';
 import AuthActions from '../../redux/login/Actions';
 import { connect } from 'react-redux';
@@ -114,12 +114,4 @@ const RegistrationScreen = ({navigation, signIn}: RegistrationScreenProps) => {
     )
 }
 
-function mapDispatchToProps(dispatch: any) {
-    return {
-      signIn: (token: string) => {
-        dispatch(AuthActions.userLoggedIn(token));
-      },
-    };
-  }
-
-  export default connect(null, mapDispatchToProps)(RegistrationScreen);
+export default RegistrationScreen

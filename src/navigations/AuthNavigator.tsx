@@ -1,13 +1,22 @@
-import { createStackNavigator } from "@react-navigation/stack";
+import { createStackNavigator, StackNavigationProp } from "@react-navigation/stack";
 import React from "react";
 import LoginScreen from "../screens/LoginScreen";
-import RegistrationScreen from "../screens/RegistrationScreen/RegistrationScreen";
+import RegistrationScreen from "../screens/RegistrationScreen";
 
 export type RootStackParamList = {
-  Home: undefined;
   Login: undefined;
   Register: undefined;
 };
+
+export type LoginScreenNavigationProp = StackNavigationProp<
+  RootStackParamList,
+  "Login"
+>;
+
+export type RegisterScreenNavigationProp = StackNavigationProp<
+  RootStackParamList,
+  "Register"
+>;
 
 const Stack = createStackNavigator<RootStackParamList>();
 

@@ -5,16 +5,13 @@ import AuthNavigator from "./AuthNavigator";
 import DrawerNavigator from "./DrawerNavigator";
 
 
+
 const AppNavigator = () => {
   const token = useSelector((state) => state.auth.token);
 
   return (
     <NavigationContainer>
-      {token ? (
-        <DrawerNavigator />
-      ) : (
-        <AuthNavigator/>
-      )}
+      {token ? <DrawerNavigator /> : <AuthNavigator />}
     </NavigationContainer>
   );
 };

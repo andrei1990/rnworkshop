@@ -1,11 +1,9 @@
-import React, { useState } from 'react'
-import { Image, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import React, { useState } from 'react';
+import { Image, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
-import styles from './styles';
-import { LoginScreenNavigationProp } from '../HomeScreen';
 import firebaseApp from '../../firebase/config';
-import AuthActions from '../../redux/login/Actions';
-import { connect } from 'react-redux';
+import styles from './styles';
+import { LoginScreenNavigationProp } from '../../navigations/AppNavigator';
 
 type LoginScreenProps = {
     navigation: LoginScreenNavigationProp;

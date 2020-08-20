@@ -22,14 +22,6 @@ type ProfileProps = {
  
  }
  
- function mapDispatchToProps(dispatch: any) {
-   return {
-     signOut: () => {
-       dispatch(AuthActions.signOut());
-     },
-   };
- }
  
- const Profile = connect(null, mapDispatchToProps)(ProfileScreen);
  
- export default Profile
+ export default ProfileScreen

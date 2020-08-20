@@ -1,12 +1,9 @@
 import React, { FunctionComponent } from "react";
-import { StyleSheet, Text, View } from "react-native";
-import { connect } from "react-redux";
-import ToDo from "../model/ToDo";
-import AppActions from "../redux/todolist/ToDoListActions";
-import DoubleTap from "./common/DoubleTap";
+import { Text, View } from "react-native";
 import strings from "res/strings";
-import Colors from "res/colors";
-import pallete from "res/pallete";
+import ToDo from "../../model/ToDo";
+import DoubleTap from "../common/DoubleTap";
+import styles from "./styles";
 
 
 
@@ -45,27 +42,7 @@ const ToDoItem: FunctionComponent<ToDoItemProps> = ({ todo, completeToDo }) => {
     </View>
   );
 };
+export default ToDoItem
 
-function mapDispatchToProps(dispatch: any) {
-  return {
-    completeToDo: (todo: ToDo) => {
-      dispatch(AppActions.completeToDo(todo));
-    },
-  };
-}
 
-export default connect(null, mapDispatchToProps)(ToDoItem);
 
-const styles = StyleSheet.create({
-  todoCompletion: {
-    width: "100%",
-    height: 15
-  },
-  container: {
-    margin: 5,
-    backgroundColor: Colors.listItem.background,
-    borderRadius: 5,
-    borderWidth: 0.5,
-  },
-  title: { ...pallete.title, paddingStart: 10, marginBottom: 3 },
-});

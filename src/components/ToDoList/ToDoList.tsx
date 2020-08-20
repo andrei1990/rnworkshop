@@ -1,14 +1,13 @@
-import React, {Component} from 'react'
-import {FlatList, StyleSheet, View} from 'react-native'
-import {connect} from 'react-redux'
-import ToDo, {ToDos} from '../model/ToDo'
-import ToDoItem from './ToDoItem'
+import React, { Component } from 'react';
+import { FlatList, StyleSheet, View } from 'react-native';
+import ToDo, { ToDos } from '../../model/ToDo';
+import ToDoItem from '../ToDoItem';
 
 interface ToDoListProps {
   todos: ToDos
 }
 
-class ToDoListNew extends Component<ToDoListProps> {
+class ToDoList extends Component<ToDoListProps> {
 
   _keyExtractor = (item: ToDo) => item.id;
 
@@ -25,11 +24,8 @@ class ToDoListNew extends Component<ToDoListProps> {
   }
 }
 
-const mapStateToProps = (state: any) => ({
-  todos: state.todoList.todos,
-})
 
-export default connect(mapStateToProps, null)(ToDoListNew)
+export default ToDoList
 
 const styles = StyleSheet.create({
   list: {
