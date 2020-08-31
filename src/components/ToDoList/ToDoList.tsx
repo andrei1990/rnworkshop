@@ -4,7 +4,7 @@ import ToDo, { ToDos } from '../../model/ToDo';
 import ToDoItem from '../ToDoItem';
 
 interface ToDoListProps {
-  todos: ToDos
+  todos?: ToDos
 }
 
 class ToDoList extends Component<ToDoListProps> {

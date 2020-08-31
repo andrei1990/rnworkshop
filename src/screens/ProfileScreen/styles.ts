@@ -14,7 +14,7 @@ export default StyleSheet.create({
   },
   button: {
     backgroundColor: "#aaaaff",
-    alignItems: 'center', 
+    alignItems: 'stretch', 
     marginStart: 15,
     marginEnd: 15,
     padding: 10

@@ -11,7 +11,7 @@ import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view
 import firebaseApp from "../../firebase/config";
 import styles from "./styles";
 import { LoginScreenNavigationProp } from "../../navigations/AuthNavigator";
-import CustomButton from "../../components/common/Button";
+import CustomButton from "../../components/common/CustomButton/Button";
 
 type LoginScreenProps = {
   navigation: LoginScreenNavigationProp;
@@ -86,12 +86,7 @@ const LoginScreen = ({ navigation, signIn }: LoginScreenProps) => {
           underlineColorAndroid="transparent"
           autoCapitalize="none"
         />
-        <CustomButton
-          style={styles.button}
-          onPress={() => onLoginPress()}
-          text="Log In"
-          titleStyle={styles.buttonTitle}
-        />
+        <CustomButton onPress={() => onLoginPress()} text="Log In" />
         <View style={styles.footerView}>
           <Text style={styles.footerText}>
             Don't have an account?{" "}
